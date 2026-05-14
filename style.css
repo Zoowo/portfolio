@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: #fff;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.links a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+/* HERO BANNER */
+.hero {
+  padding: 140px 50px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin: 0;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, #aaa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #bbb;
+  max-width: 520px;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 50px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.02)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  padding: 22px;
+  border-radius: 16px;
+
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* TEXT */
+p {
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* IMAGES */
+.img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* SNOW EFFECT */
+.snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* snow particles */
+.snow::before,
+.snow::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.08;
+  animation: snowMove 60s linear infinite;
+  filter: blur(1px);
+}
+/* different layer for depth */
+.snow::after {
+  animation-duration: 120s;
+  opacity: 0.05;
+  transform: scale(1.5);
+}
+/* snow movement */
+@keyframes snowMove {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+/* hidden state */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+/* visible state */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BACKGROUND GLOWS */
+
+.bg-glow {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow1 {
+  background: white;
+  top: -200px;
+  left: -200px;
+}
+
+.glow2 {
+  background: white;
+  bottom: -250px;
+  right: -250px;
+}
+
+/* ABOUT LAYOUT */
+
+.about-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* TEXT SIDE */
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* AVATAR SIDE */
+.about-avatar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+/* AVATAR IMAGE */
+.about-avatar img {
+  width: 320px;
+  border-radius: 22px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  background: rgba(255,255,255,0.03);
+
+  box-shadow:
+    0 0 60px rgba(255,255,255,0.10),
+    0 0 120px rgba(255,255,255,0.05);
+
+  transition: 0.35s ease;
+
+  /* makes it feel more premium */
+  backdrop-filter: blur(8px);
+}
+/* AVATAR HOVER */
+.about-avatar img:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 0 80px rgba(255,255,255,0.18),
+    0 0 160px rgba(255,255,255,0.08);
+}
+/* FLOATING ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+/* subtle floating animation */
+.about-avatar img {
+  animation: float 6s ease-in-out infinite;
+}
+/* LAYERING */
+.section, nav, .hero {
+  position: relative;
+  z-index: 1;
+}
+/* LINKS */
+a {
+  color: white;
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+.highlight {
+  color: #fff;
+  font-weight: 600;
+}

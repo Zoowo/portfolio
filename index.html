@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoowoo | Roblox Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".card, .section, .hero").forEach(el => {
+    el.classList.add("hidden");
+    observer.observe(el);
+  });
+</script>
+
+<body>
+  <div class="snow"></div>
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
+<nav>
+  <div class="logo">Zoowoo</div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Zoowoo</h1>
+  <p>Roblox Developer building immersive systems, UI, and gameplay experiences using Lua.</p>
+  <a class="btn" href="work.html">View Work</a>
+</header>
+
+<section class="section">
+  <h2>Featured Projects</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Combat System</h3>
+      <p>Fast responsive combat with abilities and hit detection.</p>
+    </div>
+
+    <div class="card">
+      <h3>Inventory System</h3>
+      <p>Drag & drop UI with saving and clean UX.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

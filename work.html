@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work | Zoowoo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".card, .section, .hero").forEach(el => {
+    el.classList.add("hidden");
+    observer.observe(el);
+  });
+</script>
+
+<body>
+  <div class="snow"></div>
+
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
+<nav>
+  <div class="logo">Zoowoo</div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h1>Work</h1>
+  <p>Everything I’ve built across different areas of Roblox development.</p>
+</section>
+
+<!-- GAMES -->
+<section class="section">
+  <h2>🎮 Games</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="game1.png" class="img">
+      <h3>Game Name Here</h3>
+      <p>Short description of your Roblox game.</p>
+      <a href="#">Play</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPTING -->
+<section class="section">
+  <h2>💻 Scripting</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="script1.png" class="img">
+      <h3>Combat System</h3>
+      <p>Custom Lua combat system with abilities and hit detection.</p>
+    </div>
+
+    <div class="card">
+      <img src="script2.png" class="img">
+      <h3>Inventory System</h3>
+      <p>Drag & drop inventory with data saving.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- UI -->
+<section class="section">
+  <h2>🖥️ UI Design</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="ui1.png" class="img">
+      <h3>Main Menu UI</h3>
+      <p>Clean animated menu interface design.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BUILDING -->
+<section class="section">
+  <h2>🏗️ Building</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="build1.png" class="img">
+      <h3>Map Design</h3>
+      <p>Environment building for gameplay zones.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GFX -->
+<section class="section">
+  <h2>🎨 GFX</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/330px-PNG_transparency_demonstration_1.png" class="img">
+      <h3>Character Render</h3>
+      <p>Edited Roblox character promotional image.</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

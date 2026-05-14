@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Zoowoo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".card, .section, .hero").forEach(el => {
+    el.classList.add("hidden");
+    observer.observe(el);
+  });
+</script>
+
+<body>
+  <div class="snow"></div>
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
+<nav>
+  <div class="logo">Zoowoo</div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h2>Contact</h2>
+
+  <div class="card">
+
+    <p>
+      Discord:
+      <span class="highlight">.zoowoo</span>
+    </p>
+
+    <p>
+      Roblox:
+      <a href="https://www.roblox.com/users/1539190503/profile" target="_blank">
+        View My Roblox Profile
+      </a>
+    </p>
+
+  </div>
+</section>
+
+</body>
+</html>

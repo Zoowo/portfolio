@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Zoowoo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".card, .section, .hero").forEach(el => {
+    el.classList.add("hidden");
+    observer.observe(el);
+  });
+</script>
+
+<body>
+  <div class="snow"></div>
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
+<nav>
+  <div class="logo">Zoowoo</div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section about-layout">
+
+  <div class="about-text">
+    <h2>About Me</h2>
+
+    <p>
+      I’m Zoowoo, a Roblox developer focused on building smooth gameplay systems,
+      scalable architecture, and clean UI using Lua in Roblox Studio.
+    </p>
+
+    <p>
+      I enjoy creating polished experiences that feel responsive, immersive,
+      and professionally designed.
+    </p>
+  </div>
+
+  <div class="about-avatar">
+    <img
+      src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-7A98C893BDC01AA6BD8B48199E86D36C-Png/150/150/AvatarHeadshot/Webp/noFilter"
+      alt="Roblox Avatar"
+    >
+  </div>
+
+</section>
